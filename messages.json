@@ -1,0 +1,37 @@
+[
+  {
+    "text": "Hi there!",
+    "user": "Amando",
+    "added": "2024-09-15T23:40:08.278Z"
+  },
+  {
+    "text": "Hello World!",
+    "user": "Charles",
+    "added": "2024-09-15T23:40:08.278Z"
+  },
+  {
+    "user": "James",
+    "text": "This is a test message",
+    "added": "2024-09-15T23:44:46.515Z"
+  },
+  {
+    "user": "James 2",
+    "text": "This is another test message",
+    "added": "2024-09-15T23:46:05.574Z"
+  },
+  {
+    "user": "New User",
+    "text": "This is a message from a new user.",
+    "added": "2024-09-15T23:47:30.162Z"
+  },
+  {
+    "user": "Test User",
+    "text": "This is another test message.",
+    "added": "2024-09-15T23:52:32.564Z"
+  },
+  {
+    "user": "Savanna",
+    "text": "I love cats",
+    "added": "2024-09-15T23:53:09.356Z"
+  }
+]

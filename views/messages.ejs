@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <%- include('nav') %>
+    <main>
+      <form action="/new" method="post">
+        <div class="form-group">
+          <label for="user">Name</label>
+          <input type="text" name="user" autocomplete="off" required/>
+        </div class="form-group">
+        <div class="form-group">
+          <label for="text">Text</label>
+          <input type="text" name="text" autocomplete="off" required/>
+        </div class="form-group">
+
+        <button type="submit">Post message</button>
+      </form>
+    </main>
+  </body>
+</html>
