@@ -10,6 +10,12 @@ main {
   margin: auto;
 }
 
+#messages-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .message {
   border: solid black 1px;
   border-radius: 10px;

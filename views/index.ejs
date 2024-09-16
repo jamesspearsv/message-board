@@ -9,14 +9,19 @@
   <body>
     <%- include('nav') %>
     <main>
-      <p>Hello, World! Template</p>
-      <% messages.map((message) => { %>
-      <div class="message">
-        <p class="name"><%= message.user %></p>
-        <p class="added"><%= new Date(message.added).toLocaleDateString() %></p>
-        <p class="text"><%= message.text %></p>
+      <h1>Cool Message Board!</h1>
+      <hr />
+      <div id="messages-container">
+        <% messages.map((message) => { %>
+        <div class="message">
+          <p class="name"><%= message.user %></p>
+          <p class="added">
+            <%= new Date(message.added).toLocaleDateString() %>
+          </p>
+          <p class="text"><%= message.text %></p>
+        </div>
+        <% }) %>
       </div>
-      <% }) %>
     </main>
   </body>
 </html>
