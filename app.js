@@ -11,7 +11,6 @@ const __dirname = dirname(__filename);
 const app = express();
 
 // App configurations
-const HOST = process.env.HOST || 'localhost';
 const PORT = process.env.PORT || 3000;
 app.set('views', join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -23,6 +22,4 @@ app.use(express.urlencoded({ extended: true }));
 app.use(appRouter);
 
 // Start app
-app.listen(PORT, HOST, () =>
-  console.log(`Server started on http://${HOST}:${PORT}`)
-);
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
