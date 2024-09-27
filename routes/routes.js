@@ -4,11 +4,11 @@ import Controller from '../controllers/controller.js';
 const appRouter = Router();
 
 // Add routes
-appRouter.get('/new', Controller.getNewRoute);
-appRouter.post('/new', Controller.postNewRoute);
+appRouter.get('/new', Controller.newMessageGet);
+appRouter.post('/new', Controller.newMessagePost);
 
 // Index route
-appRouter.get('/', Controller.getIndexRoute);
+appRouter.get('/', Controller.indexGet);
 
 appRouter.use((err, req, res, next) => {
   console.log(err);
