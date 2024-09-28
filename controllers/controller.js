@@ -32,10 +32,15 @@ const Controller = (() => {
     try {
       const rows = await Queries.getMessages();
 
-      res.render('index', {
-        title: 'Message Board',
-        messages: rows,
-      });
+      if (0 === rows) {
+        res.redirect('/');
+        res.end();
+      } else {
+        res.render('index', {
+          title: 'Message Board',
+          messages: rows,
+        });
+      }
     } catch (error) {
       next(error);
     }

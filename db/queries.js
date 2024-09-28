@@ -1,12 +1,16 @@
-import e from 'express';
+import main from './createDB.js';
 import pool from './pool.cjs';
 
 const Queries = (() => {
-  // write queries here
   async function getMessages() {
-    const { rows } = await pool.query('SELECT * FROM messages');
-    console.log(rows);
-    return rows;
+    try {
+      const { rows } = await pool.query('SELECT * FROM messages');
+      return rows;
+    } catch (error) {
+      console.log('>>> Neet to apply migrations...\n');
+      await main();
+      return 0;
+    }
   }
 
   async function insertMessage(message) {

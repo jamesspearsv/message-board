@@ -11,19 +11,16 @@ async function main() {
     username VARCHAR ( 255 ),
     content TEXT,
     added DATE
-    );
-
-    INSERT INTO  messages(username, content, added)
-    VALUES ('james', 'this is a test', '2024-9-27');
-    `;
+    );`;
 
   const client = new pg.Client();
 
-  console.log('connecting to db...');
+  console.log('>>> connecting to db...');
   await client.connect();
+  console.log('>>> creating table...');
   await client.query(SQL);
   await client.end();
-  console.log('done');
+  console.log('>>> done\n');
 }
 
-main();
+export default main;
